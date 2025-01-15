@@ -7,6 +7,7 @@ A classic chess game implemented in Java, featuring a backend logic written in J
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Contributors](#contributors)
 - [Contributing](#contributing)
 
 ## Features
@@ -38,6 +39,9 @@ A classic chess game implemented in Java, featuring a backend logic written in J
 - Click on pieces and click on their destinations to move them using GUI.
 - Click on arrows on the top left to undo and redo
 - Follow standard chess rules to play the game.
+## Contributors
+
+-[Mohamed Bassem](github.com/mohamedbassem6)
 
 ## Contributing
 
