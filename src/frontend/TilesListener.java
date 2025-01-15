@@ -48,6 +48,7 @@ public class TilesListener implements ActionListener {
                 board.resetBoard();
                 board.flipBoard();
                 board.checkForCheck();
+                board.endGame();
             } else {
                 board.resetBoard();
                 board.checkForCheck();

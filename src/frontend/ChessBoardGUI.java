@@ -2,7 +2,6 @@ package frontend;
 
 import ChessCore.*;
 import ChessCore.Pieces.*;
-import ChessCore.Pieces.Pawn;
 
 import javax.swing.*;
 import java.awt.*;
@@ -342,6 +341,26 @@ public class ChessBoardGUI extends javax.swing.JFrame {
         }
 
     }
+    private void showGameOverPopup(String message) {
+            JOptionPane.showMessageDialog(null, message, "Game Over", JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
+        }
+
+        public void endGame() {
+            if(game.isGameEnded())
+            {
+                switch (game.getGameStatus()) {
+                    case WHITE_WON ->
+                            showGameOverPopup("Checkmate! White wins!");
+                    case BLACK_WON ->
+                        showGameOverPopup("Checkmate! Black wins!");
+                    case STALEMATE ->
+                            showGameOverPopup("Stalemate! The game is a draw.");
+                    case INSUFFICIENT_MATERIAL ->
+                            showGameOverPopup("Insufficient material. The game is a draw.");
+                }
+            }
+        }
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
